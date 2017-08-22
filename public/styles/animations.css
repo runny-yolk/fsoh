@@ -1,0 +1,72 @@
+/*!
+ * A large amount of the below code is based off of animate.css
+ *
+ * animate.css -http://daneden.me/animate
+ * Version - 3.5.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2017 Daniel Eden
+ */
+
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0.9
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeInOutDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.5;
+  }
+}
+.flash {
+  animation-name: flash;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInDown {
+  animation-name: fadeInDown;
+}

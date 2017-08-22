@@ -1,0 +1,220 @@
+html {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(35,35,35);
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar{
+  width: 11px;
+}
+body::-webkit-scrollbar-track{
+  background-color: transparent
+}
+body::-webkit-scrollbar-thumb{
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 4px;
+}
+
+div {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+[data-reactroot] {
+  padding-bottom: 45px;
+}
+
+
+#description {
+  background-size: auto 90%;
+  background-image: url('../background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  line-height: 0.95;
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  color: white;
+  font-family: Lato, sans-serif;
+  letter-spacing: 1px;
+  font-size: 50px;
+  margin: 30px 0 0 0;
+}
+
+h2 {
+  color: white;
+  font-family: Lato, sans-serif;
+  letter-spacing: 5px;
+  font-size: 30px;
+  margin: 25px
+}
+
+p {
+  color: white;
+  font-family: 'EB Garamond';
+  font-size: 35px;
+  margin: 25px 20px;
+}
+
+
+#buttonwrap {
+  width: 83.33%;
+  margin: auto;
+}
+
+#button {
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 2px;
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  font-size: 45px;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  transition: 0.3s ease-out;
+  width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content;    /* Firefox/Gecko */
+  width: -webkit-max-content; /* Chrome */
+}
+
+#buttonbar {
+  height: 3px;
+  min-width: 25%;
+  max-width: 90%;
+  margin: auto;
+  transition: 0.3s ease-out;
+  margin-bottom: 3px;
+}
+
+
+#messagebox {
+  color:white;
+  font-size: 23px;
+  font-family: 'Questrial';
+  letter-spacing: 1px;
+  margin: 30px;
+  animation-name: fadeInOutDown;
+  animation-duration: 4.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+
+#filterbox {
+  animation-delay: 1.2s;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+h3 {
+  font-family: Lato, sans-serif;
+  color: white;
+  letter-spacing:1px;
+  font-size: 25px;
+  line-height: 0;
+  margin-top: 35px;
+  margin-bottom: 22px;
+}
+
+.filters {
+  background-color: rgba(255,255,255,0.05);
+  color: white;
+  vertical-align: middle;
+  font-family: 'Open Sans Condensed', sans-serif;
+  width: 700px;
+  margin: auto;
+  font-size: 20px;
+  padding: 4px;
+}
+
+.filter {
+  transition: 0.5s ease-out;
+  padding: 4px 0;
+  display: inline-grid;
+  width: 25%;
+  cursor: pointer;
+}
+.true {
+  background-color: rgba(100,255,100,0.45)
+}
+.filter:hover {
+  background-color: rgba(255,255,255,0.15)
+}
+.filter.true:hover{
+   background-color: rgba(100,255,100,0.65)
+}
+
+
+#info {
+  font-family: Questrial, sans-serif;
+  color: white;
+  font-size: 18px;
+  margin: 15px;
+  margin-top: 22px;
+}
+
+
+#twitbox {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.tweetRow {
+  background-color: rgb(60,60,60);
+  border-style: solid;
+  border-width: 1px 0px;
+  margin: 19px auto;
+  display: block;
+  height: 77px;
+  width: 885px;
+  animation-duration: 0.7;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-size: cover;
+}
+
+.inrow {
+  background-color: rgba(0,0,0,0.55);
+  font-family: Questrial, sans-serif;
+}
+
+a {
+  color: rgb(130,220,255);
+}
+
+.tweetName {
+  width: 100%;
+  height: 25px;
+  padding-top: 4px;
+  vertical-align: bottom;
+}
+
+.tweetText {
+  width: 100%;
+  height: 57px;
+  padding: 0px 15px 0 15px;
+  color: white;
+}
+
+.tweetText.ko, .tweetText.ja, .tweetText.zh {
+  padding: 1px 0 0 0;
+  font-size: 12.8px;
+}

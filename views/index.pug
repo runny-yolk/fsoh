@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title -fsoh-
+    //- ensuring mobile compatibility
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(href="https://fonts.googleapis.com/css?family=Lato|Nunito|Open+Sans+Condensed:300|EB+Garamond|Questrial" rel="stylesheet")
+    //- Kept animations seperate from master stylesheet to keep it clean
+    link(rel="stylesheet" type="text/css" href="styles/animations.css")
+    link(rel="stylesheet" type="text/css" href="styles/style.css")
+    //- Seperated media query out for same reason
+    //- Chose 1000px, so tablets typically get the mobile version, unless they're in landscape mode
+    link(rel="stylesheet" type="text/css" href="styles/mobile.css" media="(max-width: 1000px)")
+  //- Wanted mousemove event to apply to the whole body, so put the JS outside the scope of React
+  body(onmousemove="mouseMove(event)")
+    #description
+      h1 five seconds of hell
+      h2 -fsoh-
+      p Press the start button below, and I'll listen to <strike>Hell</strike> Twitter for five seconds, then show you what I heard.
+      p It's not pretty though. In fact, it's like five seconds of hell.
+      br
+      p After it's finished loading, press the button again to load another batch.
+      p If, for whatever reason, you'd actually want to do that.
+      h2 -fsoh-
+    #root
+    script(src="scripts/mouseMove.js")
+    script(src="scripts/bundle.js")

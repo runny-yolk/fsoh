@@ -1,0 +1,4 @@
+{
+    // Presets reccomended for ReactJS by Facebook
+    "presets": ["es2015", "react"]
+}
