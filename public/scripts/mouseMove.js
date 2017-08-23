@@ -1,6 +1,6 @@
 function mouseMove(e) {
     // JS-style media query
-    if (window.innerWidth < 1000) return;
+    if (window.innerWidth < 900) return;
     var btn = document.getElementById('button');
     // Ensures function doesn't throw error
     if (!btn) return;

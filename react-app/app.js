@@ -49,12 +49,11 @@ class Page extends React.Component {
     render() {
         // Parses getTweets() down to the button, so the button can be used as a button
         // Renders reviews on any page where there isn't tweets
-        // Doesn't render tweets/filters if there are no tweets
         return (
             <div>
                 <Button getTweets={this.getTweets} status={this.state.status}/>
                 {(this.state.status != 'loaded') ? <Reviews status={this.state.status}/>:null}
-                {(this.state.tweets.length != 0) ? <Tweets tweets={this.state.tweets}/>:null}
+                <Tweets tweets={this.state.tweets}/>
             </div>
         )
     }

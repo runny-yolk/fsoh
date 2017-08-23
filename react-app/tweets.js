@@ -25,8 +25,9 @@ module.exports = class Tweets extends React.Component {
 
     componentWillReceiveProps(nextProps){
         // Recalculates filters based on the new tweets
-        // Also only does this if the new tweets are new
-        if (nextProps.tweets != this.props.tweets) {
+        // Also only does this if the new tweets are new, and exist
+        // Filters wouldn't be remembered if it ran this while there were no tweets
+        if (nextProps.tweets != this.props.tweets && nextProps.tweets.length != 0) {
             this.state.timeFilter = [];
 
             var langs = [];
@@ -107,6 +108,8 @@ module.exports = class Tweets extends React.Component {
 
 
     render(){
+        //Keeps component invisible but mounted since filters are stored in state, and I wanted filters to carry over on new tweets
+        if (this.props.tweets.length == 0) return (<div></div>)
 
         // Declares all the state variables into much shorter-named equivalents for ease of use
         var tweets = this.props.tweets;
@@ -161,9 +164,8 @@ module.exports = class Tweets extends React.Component {
 
 
                 // Adds tweets to the items array
-                // Uses random key to prevent React from warning that there's no key
                 // Tweets need to all re-render every time to keep the cascade animation consistent
-                // Hence the lack of a valid key
+                // Hence the random key
                 items.push((
                     <div style={style} className="animated fadeInDown tweetRow" key={Math.random()}>
 

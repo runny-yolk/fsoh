@@ -146,7 +146,7 @@ module.exports.Filters = class Filters extends React.Component {
     }
 
     render() {
-        if(window.innerWidth < 1000){
+        if(window.innerWidth < 900){
             return (
                 <div>
                     <div id="info">
@@ -169,7 +169,7 @@ module.exports.Filters = class Filters extends React.Component {
 
                         <h4>Milliseconds containing 7+ Tweets</h4>
                         <div className="filters" id="timefilters">
-                            {this.props.time}
+                            {(this.props.time.length != 0)? this.props.time:<div id="info">No filters available here.</div>}
                         </div>
                     </div>
                 </div>
@@ -186,7 +186,7 @@ module.exports.Filters = class Filters extends React.Component {
 
                 <h3>Milliseconds containing 7+ Tweets</h3>
                 <div className="filters" id="timefilters">
-                    {this.props.time}
+                    {(this.props.time.length != 0)? this.props.time:<div id="info">No filters available here.</div>}
                 </div>
 
             </div>
